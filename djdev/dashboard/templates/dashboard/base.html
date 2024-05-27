@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="/dashboard/static/app.css">
+	<link rel="stylesheet" href="{% static 'dashboard/styles/app.css' %}">
+	<script type="module" defer src="{% static 'dashboard/scripts/app.js' %}"></script>
 	<title>{% block title %}Dashboard{% endblock %}</title>
 </head>
 

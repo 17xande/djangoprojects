@@ -5,3 +5,8 @@ db.sqlite3-journal
 *.pyc
 *.log
 *.pot
+
+djdev/dashboard/static/dashboard/styles/
+djdev/dashboard/static/dashboard/scripts/
+
+node_modules
