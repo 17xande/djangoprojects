@@ -8,5 +8,6 @@ db.sqlite3-journal
 
 djdev/dashboard/static/dashboard/styles/
 djdev/dashboard/static/dashboard/scripts/
+djdev/dashboard/static/dashboard/assets/
 
 node_modules

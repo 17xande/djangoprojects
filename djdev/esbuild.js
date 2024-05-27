@@ -1,4 +1,10 @@
 import { build, context } from 'esbuild'
+import path from 'path'
+import { fileURLToPath } from 'url'
+import fs from 'fs'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 const config = {
 	entryPoints: [
@@ -7,16 +13,21 @@ const config = {
 	],
 	entryNames: '[dir]/[name]',
 	outdir: 'dashboard/static/dashboard',
-	// outbase: 'dashboard/static/dashboard',
 	sourcemap: true,
 	format: 'esm',
 	bundle: true,
 	minify: true,
 	logLevel: 'info',
-	// loader: {
-	// 	'.html': 'copy',
-	// },
 }
+
+fs.cpSync(path.resolve(__dirname, 'node_modules/@shoelace-style/shoelace/dist/assets'), path.resolve(__dirname, 'dashboard/static/dashboard/assets'), {
+	dereference: true,
+	errorOnExist: false,
+	preserveTimestamps: true,
+	recursive: true,
+})
+
+console.log("copied shoelace assets")
 
 const watch = process.argv.lenth > 2 && process.argv[2] === '--watch'
 

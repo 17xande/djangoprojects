@@ -10,7 +10,9 @@
     "build:watch": "node ./esbuild.js --watch",
     "start": "python manage.py runserver"
   },
-  "keywords": ["django"],
+  "keywords": [
+    "django"
+  ],
   "author": "Alexandre Figueiredo",
   "license": "MIT",
   "packageManager": "pnpm@9.1.3+sha256.7f63001edc077f1cff96cacba901f350796287a2800dfa83fe898f94183e4f5f",
