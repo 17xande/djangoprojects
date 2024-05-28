@@ -1,6 +1,21 @@
 @import '@shoelace-style/shoelace/dist/themes/dark.css';
 
 html {
-	color: white;
-	background-color: black;
+	color: var(--sl-color-neutral-900);
+	background-color: hsl(240 5.9% 11%);
+	font: 16px var(--sl-font-sans);
+}
+
+#sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 320px;
+	background-color: hsl(240 5.9% 11%);
+	border-right: solid 1px hsl(240 4.6% 22%);
+	padding: 2rem;
+	margin: 0;
+	overflow: auto;
+	scrollbar-width: thin;
 }
