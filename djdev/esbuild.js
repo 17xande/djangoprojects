@@ -29,7 +29,7 @@ fs.cpSync(path.resolve(__dirname, 'node_modules/@shoelace-style/shoelace/dist/as
 
 console.log("copied shoelace assets")
 
-const watch = process.argv.lenth > 2 && process.argv[2] === '--watch'
+const watch = process.argv.length > 2 && process.argv[2] === '--watch'
 
 if (watch) {
 	config.minify = false
